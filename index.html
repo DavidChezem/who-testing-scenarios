@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who test scenarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #a39f9f; /* White background */
+            color: #333; /* Black text */
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 2px solid black; /* Black border around each table */
+            font-size: 0.7em; /* Set table font size to 0.7em */
+        }
+        th, td {
+            border: 2px solid black; /* Black border around each cell */
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .gherkin {
+            background-color: #d6d8da; /* Light blue background */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333; /* Black text inside the boxes */
+        }
+        .gherkin h2 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .gherkin p {
+            margin: 5px 0;
+        }
+        .gherkin p strong {
+            color: #007bff;
+        }
+        .logo {
+            display: block;
+            margin: 0 0 10px 0; /* Left-justify the image and add bottom margin */
+            width: 150px; /* Adjust the width as needed */
+        }
+        .left-cell {
+            padding-right: 15px; /* Adjust this value to move the middle border */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://www.aais.com/hs-fs/hubfs/ad_astra-color.png?width=1067&height=269&name=ad_astra-color.png" alt="Logo" class="logo">
+
+    <!--Astra-48685-->
+    <table>
+        <tr>
+            <td class="gherkin left-cell">
+                <h2>FEATURE: Pathways - Find and Replace Course Functionality not Working</h2>
+                <h2>Astra - 48685 </h2>
+            </td>
+            <td class="gherkin">
+                <h2>SCENARIO: User is needing to execute a Find and Replace of a specific course</h2>
+                <p><strong>Given</strong> the user is logging into the platform</p>
+                <p><strong>When</strong> the user selects the kabob for Find and Replace Course</p>
+                <p><strong>And</strong> executes a Find and Replace of a specific course Subject</p>
+                <p><strong>And</strong> the user searches for the Subject</p>
+                <p><strong>And</strong> the user makes the replacement with a new course</p>
+                <p><strong>Then</strong> the system will find the Subject replacement and save the change</p>
+
+                <h2>SCENARIO: Validate the Select Course Group option is working correctly</h2>
+                <p><strong>Given</strong> the user is selecting the Select Course Group fly out menu</p>
+                <p><strong>When</strong> the link is selected</p>
+                <p><strong>And</strong> the user is selecting the Select Course Group fly out menu</p>
+                <p><strong>And</strong> the Course Group options are displayed</p>
+                <p><strong>And</strong> when clicked the course will move into the Course Group column</p>
+                <p><strong>And</strong> the user clicks Next</p>
+                <p><strong>Then</strong> the found courses search results should display with the checkboxes</p>
+
+                <h2>SCENARIO: Validate the Search Course by course abbr is functional</h2>
+                <p><strong>Given</strong> the user is working in the Find and Replace modal within the platform</p>
+                <p><strong>When</strong> the user inputs a Course subject abbr</p>
+                <p><strong>Then</strong> the matching course loads in the Search Results window pane </p>
+
+                <h2>SCENARIO: Validate when entering a Course Code abbr that is malformed it will not return a search value</h2>
+                <p><strong>Given</strong> the user is working in the Find and Replace modal within the platform</p>
+                <p><strong>When</strong> the user inputs a Course subject abbr that is malformed</p>
+                <p><strong>Then</strong> the "No results. Enter new search terms" error message is displayed </p>
+            </td>
+        </tr>
+    </table>
+
+    
+    <!-- Duplicate Table -->
+    
+    <!--Astra-39196-->
+    <table>
+        <tr>
+            <td class="gherkin left-cell">
+                <h2>FEATURE: Manage access by user/group for a department. As an admin, I want to control some users' access to change Part of Term because it can break processes in Banner
+                <h2>Astra - 39196</h2>
+            </td>
+            <td class="gherkin">
+                <h2>SCENARIO: User is able to access the Settings > Departments option</h2>
+                <p><strong>Given</strong> the user is logging into the platform</p>
+                <p><strong>When</strong> the Admin user selects the Settings > Departments menu option</p>
+                <p><strong>Then</strong> the Department Management options are displayed and accessible to the Admin user</p>
+
+                <h2>SCENARIO: User is able to search a specific departtment using the search field using department code </h2>
+                <p><strong>Given</strong> the Admin user has opened the Department Management section within Departments</p>
+                <p><strong>When</strong> the user executes a search using a department code such as ABLW or CDC</p>
+                <p><strong>Then</strong> the correct department name search result will be displayed within the Department Management display field </p>
+
+                <h2>SCENARIO: User is able to select and Edit Permissions for the the Department search results </h2>
+                <p><strong>Given</strong> the user has executed a search and results are displayed in the Department view</p>
+                <p><strong>When</strong> the user selects a specific Department and clicks the Kebob icon for Edit Permissions</p>
+                <p><strong>Then</strong> the Edit curtan will display for the user</p>
+
+                <h2>SCENARIO: User is able to select the All Departments option to apply Permissions settings  </h2>
+                <p><strong>Given</strong> the user is working within the Departments settings in the Platform</p>
+                <p><strong>When</strong> the user selects All Departments from the Department Management listing</p>
+                <p><strong>Then</strong> clicking on Edit Permissions opens the Add Users and Groups input field</p>
+
+                <h2>SCENARIO: Admin user is able to select a Permission level from the drop down menu of Permission options of View, Edit, Publish, and Custom</h2>
+                <p><strong>Given</strong> the user is working within the Add Users or Groups options within a specific Department</p>
+                <p><strong>When</strong> the user clicks into the Permissions drop down menu</p>
+                <p><strong>Then</strong> the Permissions option drop down displays current options of View, Edit, Publish, and Custom </p>
+
+                <h2>SCENARIO: Validate the Permisisons menu selector displays the available options</h2>
+                <p><strong>Given</strong> the Admin user needs to set a user Permission for another plaform user </p>
+                <p><strong>When</strong> the Admin user navigates to Settings > Departments </p>
+                <p><strong>And</strong> selects a specific Department</p>
+                <p><strong>And</strong> clicks the Edit Permissions Kabob menu for that user</p>
+                <p><strong>Then</strong> the UI displays new Permissions options (View, Edit, Publish, Custom)</p>
+
+                <h2>SCENARIO: Validate the current "User" based permission does NOT have any Courses/Sections "EDIT" priv  </h2>
+                <p><strong>Given</strong> the platform user is logged in as a "User" based permission while working in the Courses/Sections curtain </p>
+                <p><strong>When</strong> viewing the Courses curtain and the details within the Courses detail view </p>
+                <p><strong>Then</strong> the User permission only has the View option and no Edit privs</p>
+
+                <h2>SCENARIO: Validate when Custom permissions have been set and Saved - the UI retains the checked Departments</h2>
+                <p><strong>Given</strong> a user has been assigned Custom level permissions within a specific Department</p>
+                <p><strong>When</strong>  the Admin user checks specific View and/or Edit checkboxes next to the section viewer elements and Saved</p>
+                <p><strong>Then</strong> the selected Saved checks are reatained when the Admin user leaves the modal and opens it again</p>
+
+                <h2>SCENARIO: Validate when Custom permissions View options allows user to Select All from the Field row and All permissions details are checked correctly</h2>
+                <p><strong>Given</strong> a user has been assigned Custom level permissions within a specific Department
+                <p><strong>When</strong>  the Admin user checks the the View check at the Field level</p>
+                <p><strong>Then</strong> all of the View check options have been selected</p> 
+            </td>
+        </tr>
+    </table>
+
+
+    <table>
+        <tr>
+            <td class="gherkin left-cell">
+                <h2>FEATURE: Restrict all fields in section editing except meeting "Building" and "Room" so that we effectively have the same functionality as AS8.</h2>
+                <h2>Astra - 45557 </h2>
+            </td>
+            <td class="gherkin">
+                <h2>SCENARIO: Room only permissions enforced at the UI level </h2>
+                <p><strong>Given</strong> the user is logging into the platform</p>
+                <p><strong>When</strong> user is working in Sections</p>
+                <p><strong>Then</strong> the room only entitlement default is enforced at the UI section levels</p>
+
+                <h2>SCENARIO: Settings UI enforcement</h2>
+                <p><strong>Given</strong> user is working in Sections at the UI level</p>
+                <p><strong>When</strong> making permission changes for room-only entitlements </p>
+                <p><strong>Then</strong> the UI settings will also enforce the entitlement permission settings </p>
+
+                <h2>SCENARIO: Validate the Privileges services also enforce the Room Only entitlement setting</h2>
+                <p><strong>Given</strong> the user has been granted the specific Room Only entitlement setting</p>
+                <p><strong>When</strong> using the Sections and Spaces feature within the platform</p>
+                <p><strong>Then</strong> the Privileges service enforces the same Room Only entitlement</p>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
